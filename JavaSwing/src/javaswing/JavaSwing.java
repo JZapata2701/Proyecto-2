@@ -4,6 +4,8 @@
  */
 package javaswing;
 
+import GraphicInterface.FmrMainBlockbuster;
+
 /**
  *
  * @author PC267
@@ -17,6 +19,7 @@ public class JavaSwing {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 
                 FmrMainBlockbuster mainFrame = new FmrMainBlockbuster();
 
