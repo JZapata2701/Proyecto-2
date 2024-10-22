@@ -127,6 +127,11 @@ public class FmrMainBlockbuster extends javax.swing.JFrame {
         file.add(jSeparator1);
 
         exit.setText("Exit");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
         file.add(exit);
 
         menuBar.add(file);
@@ -198,6 +203,12 @@ public class FmrMainBlockbuster extends javax.swing.JFrame {
         addClient.toFront();
         
     }//GEN-LAST:event_newClientActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        
+        this.dispose();
+        
+    }//GEN-LAST:event_exitActionPerformed
     
     public JMenuItem getClientsList() {
         return clientsList;

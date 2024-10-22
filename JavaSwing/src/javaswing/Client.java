@@ -72,6 +72,8 @@ public class Client implements Item{
     @Override
     public void setDate(String birthday) {
         this.birthday = birthday;
-    }        
+    }
+    
+    
     
 }

@@ -4,6 +4,8 @@
  */
 package GraphicInterface;
 
+import javaswing.Client;
+
 /**
  *
  * @author PC267
@@ -41,9 +43,9 @@ public class FmrNewClient extends javax.swing.JInternalFrame {
         jClearbtn = new javax.swing.JButton();
         jMalerbtn = new javax.swing.JRadioButton();
         jFemalerbtn = new javax.swing.JRadioButton();
-        jDaycbox = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
         jMonthcbox = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jDaycbox = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jYearcbox = new javax.swing.JComboBox<>();
         jCancelbtn = new javax.swing.JButton();
@@ -86,21 +88,26 @@ public class FmrNewClient extends javax.swing.JInternalFrame {
         buttonGroup1.add(jFemalerbtn);
         jFemalerbtn.setText("Female");
 
-        jDaycbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jDaycbox.setToolTipText("");
-
-        jLabel6.setText("/");
-
-        jMonthcbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jMonthcbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+        jMonthcbox.setToolTipText("");
         jMonthcbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMonthcboxActionPerformed(evt);
             }
         });
 
+        jLabel6.setText("/");
+
+        jDaycbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Day", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jDaycbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jDaycboxActionPerformed(evt);
+            }
+        });
+
         jLabel7.setText("/");
 
-        jYearcbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jYearcbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Year", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024 ​" }));
         jYearcbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jYearcboxActionPerformed(evt);
@@ -131,11 +138,11 @@ public class FmrNewClient extends javax.swing.JInternalFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jDaycbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jMonthcbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel6)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jMonthcbox, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jDaycbox, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -173,9 +180,9 @@ public class FmrNewClient extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jDaycbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
                     .addComponent(jMonthcbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jDaycbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
                     .addComponent(jYearcbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -222,16 +229,41 @@ public class FmrNewClient extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jAceptbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAceptbtnActionPerformed
+        Client newClient = new Client();
         
+        newClient.setName(jNameTxt.getText());
+        
+        if (jMalerbtn.isSelected()){
+            newClient.setGenre("Male");
+        }else if(jFemalerbtn.isSelected()){
+            newClient.setGenre("Female");
+        }
+        
+        newClient.setId(jIdTxt.getText());
+        
+        newClient.setDate(jDaycbox.getSelectedItem()+"/"+jMonthcbox.getSelectedItem()+"/"+jYearcbox.getSelectedItem());
+        
+        newClient.setAddress(jAddressTxt.getText());
+        
+        System.out.println(newClient.getName()+
+                "|"+newClient.getGenre()+
+                "|"+newClient.getId()+
+                "|"+newClient.getDate()+
+                "|"+newClient.getAddress());
+        this.dispose();
     }//GEN-LAST:event_jAceptbtnActionPerformed
 
-    private void jMonthcboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMonthcboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMonthcboxActionPerformed
+    private void jDaycboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jDaycboxActionPerformed
+        
+    }//GEN-LAST:event_jDaycboxActionPerformed
 
     private void jYearcboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jYearcboxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jYearcboxActionPerformed
+
+    private void jMonthcboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMonthcboxActionPerformed
+        
+    }//GEN-LAST:event_jMonthcboxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
