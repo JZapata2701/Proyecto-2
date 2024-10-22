@@ -28,7 +28,7 @@ public class FmrNewClient extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        jGenderGroupgbtn = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -81,11 +81,16 @@ public class FmrNewClient extends javax.swing.JInternalFrame {
         });
 
         jClearbtn.setText("Clear");
+        jClearbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jClearbtnActionPerformed(evt);
+            }
+        });
 
-        buttonGroup1.add(jMalerbtn);
+        jGenderGroupgbtn.add(jMalerbtn);
         jMalerbtn.setText("Male");
 
-        buttonGroup1.add(jFemalerbtn);
+        jGenderGroupgbtn.add(jFemalerbtn);
         jFemalerbtn.setText("Female");
 
         jMonthcbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Month", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
@@ -115,6 +120,11 @@ public class FmrNewClient extends javax.swing.JInternalFrame {
         });
 
         jCancelbtn.setText("Cancel");
+        jCancelbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCancelbtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -265,15 +275,33 @@ public class FmrNewClient extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_jMonthcboxActionPerformed
 
+    private void jCancelbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCancelbtnActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jCancelbtnActionPerformed
+
+    private void jClearbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jClearbtnActionPerformed
+        jNameTxt.setText("");
+        
+        jGenderGroupgbtn.clearSelection();
+        
+        jIdTxt.setText("");
+        
+        jMonthcbox.setSelectedIndex(0);
+        jDaycbox.setSelectedIndex(0);
+        jYearcbox.setSelectedIndex(0);
+        
+        jAddressTxt.setText("");
+    }//GEN-LAST:event_jClearbtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jAceptbtn;
     private javax.swing.JTextField jAddressTxt;
     private javax.swing.JButton jCancelbtn;
     private javax.swing.JButton jClearbtn;
     private javax.swing.JComboBox<String> jDaycbox;
     private javax.swing.JRadioButton jFemalerbtn;
+    private javax.swing.ButtonGroup jGenderGroupgbtn;
     private javax.swing.JTextField jIdTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
